@@ -26,33 +26,30 @@ A modern **React + TypeScript** marketplace app built with **Chakra UI**, featur
 
 ## 📦 Installation
 
-1. ### 1. Clone the Repository
+1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
 
-2. ### 2. Install Dependencies
+2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-3. ### 3. Run the Application
+3. Run the Application
 
 ```bash
 npm run dev
 ```
 
-4. ### 4. Open the Application in Your Browser
+4. Open the Application in Your Browser
 
 Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
 ### 📸 Credits
 
-All demo product images are sourced from Unsplash
-.
-A huge thanks to the talented photographers who make their work freely available ❤️
-
+All demo product images are sourced from Unsplash ❤️
 ---
