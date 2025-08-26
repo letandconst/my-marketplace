@@ -51,10 +51,8 @@ Open [http://localhost:3000](http://localhost:3000) to view the application in y
 
 ### 📸 Credits
 
-# All demo product images are sourced from Unsplash
-
+All demo product images are sourced from Unsplash
 .
-
-# A huge thanks to the talented photographers who make their work freely available ❤️
+A huge thanks to the talented photographers who make their work freely available ❤️
 
 ---
