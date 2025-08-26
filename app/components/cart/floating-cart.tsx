@@ -5,6 +5,7 @@ import { Trash2, Minus, Plus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { EmptyState } from '@/app/components/ui/empty-state';
 import type { CartItem } from '@/app/types/marketplace';
+import { formatCurrency } from '@/app/utils/currencyFormatter';
 
 const MotionBox = motion(Box);
 
@@ -203,7 +204,7 @@ export function FloatingCart({ isOpen, onClose, cartItems, onUpdateQuantity, onR
 												w='100%'
 											>
 												<Text>Subtotal ( {totalItems > 1 ? `${totalItems} items` : `${totalItems} item`}):</Text>
-												<Text fontWeight='bold'>&#8369; {totalPrice.toFixed(2)}</Text>
+												<Text fontWeight='bold'>{formatCurrency(totalPrice)}</Text>
 											</HStack>
 											<HStack
 												justify='space-between'
@@ -228,7 +229,7 @@ export function FloatingCart({ isOpen, onClose, cartItems, onUpdateQuantity, onR
 													fontWeight='bold'
 													color={priceColor}
 												>
-													&#8369; {totalPrice.toFixed(2)}
+													{formatCurrency(totalPrice)}
 												</Text>
 											</HStack>
 										</VStack>
@@ -255,7 +256,8 @@ export function FloatingCart({ isOpen, onClose, cartItems, onUpdateQuantity, onR
 							</Button>
 							<Button
 								variant='ghost'
-								size='sm'
+								size='lg'
+								w='100%'
 								onClick={onClearCart}
 							>
 								Clear Cart
