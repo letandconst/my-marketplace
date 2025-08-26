@@ -139,7 +139,7 @@ export const mockItems: MarketplaceItem[] = [
 		description: 'Wireless Mechanical Keyboard, crafted with quality materials for everyday use.',
 		price: 316.61,
 		category: 'Books',
-		image: '/mockitems/mechanical-keyboard.jpg',
+		image: '/mockitems/mech-keyboard.jpg',
 		seller: 'KitchenKing',
 		tags: ['organic', 'outdoor', 'tech'],
 		createdAt: '2024-04-10T00:00:00',
