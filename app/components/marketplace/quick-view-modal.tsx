@@ -26,17 +26,14 @@ export function QuickViewModal({ item, isOpen, onClose, onFavorite, onAddToCart,
 	const priceColor = useColorModeValue('brand.600', 'brand.300');
 
 	const [transitioning, setTransitioning] = useState(false);
-	const [nextItem, setNextItem] = useState<MarketplaceItem | null>(null);
 
 	if (!item) return null;
 
 	const handleRelatedClick = (relatedItem: MarketplaceItem) => {
-		setNextItem(relatedItem);
 		setTransitioning(true);
 		setTimeout(() => {
 			onItemChange?.(relatedItem);
 			setTransitioning(false);
-			setNextItem(null);
 		}, 400);
 	};
 

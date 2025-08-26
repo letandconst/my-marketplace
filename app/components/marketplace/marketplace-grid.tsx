@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Box, Container, SimpleGrid, Text, useColorModeValue, useToast, VStack, useDisclosure, Button, Flex } from '@chakra-ui/react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -120,11 +120,6 @@ export function MarketplaceGrid({ searchQuery = '', onSearch }: MarketplaceGridP
 			}
 		});
 	}, [items, searchQuery, selectedCategory, sortBy]);
-
-	const relatedItems = useMemo(() => {
-		if (!selectedItem) return [];
-		return items.filter((item) => item.id !== selectedItem.id && (item.category === selectedItem.category || item.tags.some((tag) => selectedItem.tags.includes(tag)))).slice(0, 3);
-	}, [selectedItem, items]);
 
 	// --- Derived pagination values ---
 	const totalPages = Math.ceil(filteredAndSortedItems.length / ITEMS_PER_PAGE);
@@ -246,7 +241,7 @@ export function MarketplaceGrid({ searchQuery = '', onSearch }: MarketplaceGridP
 										</Button>
 
 										<Text>
-											Page {currentPage} of {totalPages}
+											{currentPage} of {totalPages}
 										</Text>
 
 										<Button
